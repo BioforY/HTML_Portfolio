@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Portfolio</title>
+        <style>
+            body {
+                margin: 0;
+                display:flex;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                width: 25%;
+                background-color: #f1f1f1;
+                height: 100vh;
+                overflow: auto;
+            }
+            li a {
+                display: block;
+                color: #000;
+                padding: 30px;
+                text-decoration: none;
+            }
+            li a.active {
+                background-color: #04AA6D;
+                color: white;
+            }
+            li a:hover:not(.active) {
+                background-color: #555;
+                color: white;
+            }
+            .content {
+                flex-grow: 1;
+                padding: 20px;
+            }
+            .content > div {
+                display: none;
+            }
+            .content > div:target {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+        <div class="content">
+            <div id="home">
+                <h2>Home</h2>
+                <h3>Welcome!</h3>
+                <p>This is home. Feel at home.</p>
+            </div>
+            <div id="about">
+                <h2>About</h2>
+                <p>My portfolio containing available projects to be done.</p>
+            </div>
+            <div id="projects">
+                <h2>Projects</h2>
+                <p>Below is a list of available projects:</p>
+                <ul>
+                    <li>Bee keeping application.</li>
+                    <li>Rent payment website.</li>
+                    <li>Fresh food delivery services.</li>
+                </ul>
+            </div>
+    </body>
+</html>
